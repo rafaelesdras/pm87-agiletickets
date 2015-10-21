@@ -32,7 +32,7 @@ public class Sessao {
 
 	private Integer ingressosReservados = 0;
 
-	private BigDecimal preco;
+	private BigDecimal precoSugerido;
 
 	public Long getId() {
 		return id;
@@ -103,12 +103,20 @@ public class Sessao {
         return !naoTemEspaco;
 	}
 
-	public void setPreco(BigDecimal preco) {
-		this.preco = preco;
+	public void setPrecoSugerido(BigDecimal precoSugerido) {
+		this.precoSugerido = precoSugerido;
 	}
 
-	public BigDecimal getPreco() {
-		return preco;
+	public BigDecimal getPrecoSugerido() {
+		return precoSugerido;
+	}
+	
+	public BigDecimal calculaPreco() {
+		return espetaculo.getTipo().getPreco().calculaPreco(this);
+	}
+	
+	public double percentualDisponibilidade() {
+		return (totalIngressos - ingressosReservados) / totalIngressos.doubleValue();
 	}
 	
 }

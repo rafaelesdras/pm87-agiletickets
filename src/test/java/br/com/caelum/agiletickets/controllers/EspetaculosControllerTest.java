@@ -108,7 +108,7 @@ public class EspetaculosControllerTest {
 		espetaculo.setTipo(TipoDeEspetaculo.TEATRO);
 
 		Sessao sessao = new Sessao();
-		sessao.setPreco(new BigDecimal("10.00"));
+		sessao.setPrecoSugerido(new BigDecimal("10.00"));
 		sessao.setTotalIngressos(5);
 		sessao.setEspetaculo(espetaculo);
 

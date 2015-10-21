@@ -47,7 +47,7 @@ public class SessaoTestDataBuilder {
 	public Sessao build() {
 		Sessao sessao = new Sessao();
 		sessao.setEspetaculo(espetaculo);
-		sessao.setPreco(preco);
+		sessao.setPrecoSugerido(preco);
 		sessao.setTotalIngressos(totalIngressos);
 		sessao.setIngressosReservados(ingressosReservados);
 		sessao.setDuracaoEmMinutos(duracaoEmMinutos);
